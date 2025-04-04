@@ -1,0 +1,606 @@
+/* navbar ex */
+/* Navbar Styles */
+.navbar {
+  background-color: #FFE2E2; /* Light pink background */
+  padding: 10px 0;
+  position: relative; /* Ensures the navbar itself has a stacking context */
+  z-index: 1000; /* Make sure the navbar stays on top */
+}
+.menu {
+  display: flex;
+  list-style: none;
+  z-index: 1001; /* Ensure the menu stays in front of other content */
+}
+
+.menu li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+
+/* Dropdown Styling */
+.dropdown:hover .submenu {
+  display: block;
+  z-index: 2000; /* Make sure the submenu appears in front of everything else */
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2000; /* Ensure the submenu has a higher stacking context */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .menu li {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .navbar-toggler {
+      display: block;
+  }
+
+  .navbar-toggler-icon {
+      font-size: 30px;
+  }
+
+  .navbar .navbar-toggler[aria-expanded="true"] ~ .menu {
+      display: flex;
+  }
+
+  .submenu {
+      position: relative;
+  }
+}
+
+/* navbar-top */
+
+/* image slider */
+/* Carousel Container */
+.carousel {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Ensuring images scale well on all devices */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Smooth transitions for slides */
+.carousel-item {
+  background-color: #000; /* Background in case image is small */
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fixing the image issue */
+.carousel-item img {
+  width: auto; /* Keeps the original width */
+  height: 100%; /* Makes sure it fills the height */
+  max-width: 100%; /* Prevents overflow */
+  object-fit: contain; /* Prevents cropping */
+  transition: transform 0.3
+}
+
+/* nail art info */
+#nailart-history {
+  background-color: #fff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+h2 {
+  color: #d63384;
+  font-size: 2rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img-fluid {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 20px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-fluid:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* card */
+#manicure-pedicure {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 10px;
+}
+
+.img-fluid {
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.img-fluid:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #d63384;
+}
+
+h3 {
+  color: #343a40;
+}
+
+/* nail art gallery */
+/* Container Styling */
+
+#home {
+  padding: 50px 20px; /* Add some padding around the section */
+  background-color:white; /* Light background for the section */
+  text-align: center; /* Center the text inside the section */
+}
+
+#home h1 {
+  font-size: 2.5rem; /* Font size for the heading */
+  color: #333; /* Dark color for the heading */
+  margin-bottom: 20px; /* Space between heading and text */
+}
+
+#home p {
+  font-size: 1.1rem; /* Font size for the paragraph */
+  color: #555; /* Medium dark color for the paragraph */
+  max-width: 800px; /* Limit the width of the text for better readability */
+  margin: 0 auto; /* Center align the paragraph */
+  line-height: 1.6; /* Line spacing for better readability */
+}
+
+#home b {
+  font-weight: bold; /* Make the paragraph bold */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #home h1 {
+      font-size: 2rem; /* Smaller font size for smaller screens */
+  }
+
+  #home p {
+      font-size: 1rem; /* Smaller font size for paragraph */
+      padding: 0 10px; /* Add some padding on small screens for better spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  #home h1 {
+      font-size: 1.5rem; /* Even smaller font size for very small screens */
+  }
+
+  #home p {
+      font-size: 0.95rem; /* Smaller text on mobile */
+      padding: 0 15px; /* More padding for small screens */
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Section Styling */
+section {
+  text-align: center;
+  padding: 60px 0;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h1,
+h2,
+h3 {
+  color: black;
+  font-weight: 600;
+}
+
+/* Category Cards */
+.category-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 5px solid rgb(226, 150, 163);
+}
+
+/* Design Category Cards */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #e91e63;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #c2185b;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .category-img {
+    height: 180px;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+
+/* geoloction */
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+iframe {
+  width: 80%; /* Adjust width */
+  height: 400px; /* Adjust height */
+  border: 0;
+  border-radius: 10px; /* Optional: for rounded corners */
+}
+
+
+/* about us  */
+/* Global Styles */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, white, white);
+  color: white;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+/* About Section */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff5f7;
+  color: #333;
+}
+
+header {
+  background-color: #ffccda;
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #444;
+}
+
+.about, .team, .services {
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  color: #d63384;
+  font-size: 28px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-item {
+  background-color: #ffe0e6;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #ffccda;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 50px;
+  background:white;
+  color: white;
+}
+
+#contactBtn {
+  background: white;
+  color: #6e8efb;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contactBtn:hover {
+  background: #fff4;
+  color:black;
+}
+
+
+/* newslister signup */
+.signup-container {
+  width: 400px; /* Adjust width */
+  margin: 50px auto;
+  padding: 30px;
+  background-color:#ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-container h2 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signup-btn:hover {
+  background-color: #218838;
+}
+
+.login-link {
+  margin-top: 10px;
+  display: block;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color:black;
+}
+
+
+/* footer */
+.footer {
+  background:#FFE2E2 ;
+  color:black;
+  padding: 40px 20px;
+  text-align: center;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer-section {
+  margin: 10px;
+  color: black;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+.quick-links a {
+  display: block;
+  color:black;
+  text-decoration: none;
+  margin: 5px 0;
+}
+.quick-links a:hover {
+  color:black;
+}
+.subscribe input {
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+.subscribe button {
+  padding: 10px;
+  background: #ff6600;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.social-icons a {
+  color:black;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+

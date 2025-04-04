@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      /* contact form */
+      .contact-form {
+    max-width: 500px; /* Adjust width */
+    margin: 50px auto; /* Centers horizontally */
+    padding: 20px;
+    background-color: #fff; /* Background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers text inside */
+}
+
+.contact-form h2 {
+    text-align: center; /* Centers heading */
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+     <!-- navbar-top -->
+     <nav class="navbar navbar-expand-lg bg-#FFE2E2">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> <div class="logo">
+            <img src="./image/fav_logo__1_-removebg-preview.png" alt="" width="80px"></a>
+        </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">&#9776;</span>
+          </button>
+          <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="./services.html">Services ▾</a>
+                <ul class="submenu">
+                    <li><a href="./Manicure & Pedicure.html">Manicure & Pedicure</a></li>
+                    <li><a href="./polish nail.html">Polish nail</a></li>
+                    <li><a href="./nail extenstion.html">Nail Extensions</a></li>
+                    <li><a href="./nail desgin.html">Nail desgin</a></li>
+                    <li><a href="./Geomatrical nail.html"> GeomatricalNail</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="./gallery.html">Gallery ▾</a>
+                <ul class="submenu">
+                    <li><a href="./simple nail art.html">Simple Nail Art</a></li>
+                    <li><a href="./Ombré Nails.html">Ombré Nails</a></li>
+                    <li><a href="./Floral Designs.html">Floral Designs</a></li>
+                    <li><a href="./Luxury Nails.html">Luxury Nails</a></li>
+                </ul>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./signup.html">sginup</a></li>
+            <li><a href="./feedbackform.html">feedback</a></li>
+        </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- navbar-top -->
+
+
+      <!-- form -->
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+
+
+        
+      <!-- footer -->
+<footer class="footer">
+  <div class="footer-container">
+      <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <a href="./index.html">Home</a>
+          <a href="./services.html">Shop</a>
+          <a href="./about.html">About Us</a>
+          <a href="./contact.html">Contact</a>
+      </div>
+      <div class="footer-section subscribe">
+          <h3>Subscribe to Our Newsletter</h3>
+          <input type="email" id="email" placeholder="Enter your email">
+          <button onclick="subscribe()">Subscribe</button>
+      </div>
+      <div class="footer-section social-icons">
+          <h3>Follow Us</h3>
+          <a href="https://www.facebook.com/"><img src="./footer image/Facebook_Logo_PNG-removebg-preview.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="./footer image/download__15_-removebg-preview.png" alt="Instagram"></a>
+            <a href="https://x.com/?lang=en"><img src="./footer image/Icon_Logo__Twitter_logo__Twitter_logo__blue__social_Media__area_png-removebg-preview.png" alt="Twitter"></a>
+      </div>
+  </div>
+</footer>
+<!-- footer -->
+
+       <!-- bootstrap -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       <!-- bootstrap -->
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
